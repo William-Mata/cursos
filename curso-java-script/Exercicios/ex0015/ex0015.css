@@ -1,0 +1,35 @@
+@charset "UTF-8";
+body {
+    background: rgb(100, 13, 13);
+    font: normal, 15pt;
+    margin: auto;
+    font-family: arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+section {
+    margin: auto;
+    width: 500px;
+    font-style: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+
+div#msg {
+    text-align: center;
+}
+
+div#foto {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-style: italic;
+}

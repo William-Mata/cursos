@@ -1,0 +1,5 @@
+c:\users\william estudos\documents\visual studio 2012\Projects\Helloword_console\Helloword_console\bin\Debug\Helloword_console.exe.config
+c:\users\william estudos\documents\visual studio 2012\Projects\Helloword_console\Helloword_console\bin\Debug\Helloword_console.exe
+c:\users\william estudos\documents\visual studio 2012\Projects\Helloword_console\Helloword_console\bin\Debug\Helloword_console.pdb
+c:\users\william estudos\documents\visual studio 2012\Projects\Helloword_console\Helloword_console\obj\Debug\Helloword_console.exe
+c:\users\william estudos\documents\visual studio 2012\Projects\Helloword_console\Helloword_console\obj\Debug\Helloword_console.pdb

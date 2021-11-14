@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(79, 92, 170);
+            font: normal, 18pt, Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bem vindo ao Brasil.</h1>
+    Escolha o seu país de origem: <label for="pais" id="pais"></label>
+    <select name="pais" id="pais">
+        <p><optgroup></p>
+            <option value="BR" >BR</option>
+            <option value="EUA" >EUA</option>
+            <option value="FRA" >FRA</option>
+            <option value="ESP" >ESP</option>
+            <option value="ARG" >ARG</option>
+        </optgroup>
+    </select>
+    <input type="button" value="Verificar" onclick="tstpais()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function tstpais() {
+            var po = window.document.querySelector('select#pais')
+            var po = String(po.value)
+            var res = window.document.querySelector('div#res')
+            if (po == 'BR') {
+                res.innerHTML = `<Strong>Você é Brasileiro.</Strong>`
+            } else {
+                res.innerHTML = `<Strong>Você é Estrangeiro.</Strong>`
+            }
+        }
+    </script>
+
+</body>
+
+</html>

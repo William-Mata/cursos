@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="ex0015.css">
+    <script src="ex0015.js"></script>
+</head>
+
+<body>
+    <h1>Verificador de Idade</h1>
+    <section>
+        <div id="anoesexo">
+            Ano de nascimento aparente: <input type="number" name="anonascimento" id="anonascimento" min="1950"><br/>
+            <p>Sexo:
+                <input type="radio" name="sexo" id="sexof" checked><label for="sexom">Masculino</label>
+
+                <input type="radio" name="sexo" id="sexom"><label for="sexof">Feminino</label></p>
+
+            <p><input type="button" value="Verificar" onclick="verificarinformacoes()"></p>
+        </div>
+        <div id="msg">
+            <p>Detectamos um dos membros de La Casa Del Papel. <br/> Para descobrir quem é digite o ano de nascimento.</p>
+        </div>
+        <div id="foto">
+            <img id="imagem" src="imagens/anonimo.png" />
+        </div>
+
+        <div id="res">
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Gafanhoto</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+c:\Users\william estudos\documents\visual studio 2012\Projects\Loja\Loja.DTO\bin\Debug\Loja.DTO.dll
+c:\Users\william estudos\documents\visual studio 2012\Projects\Loja\Loja.DTO\bin\Debug\Loja.DTO.pdb
+c:\Users\william estudos\documents\visual studio 2012\Projects\Loja\Loja.DTO\obj\Debug\Loja.DTO.csprojResolveAssemblyReference.cache
+c:\Users\william estudos\documents\visual studio 2012\Projects\Loja\Loja.DTO\obj\Debug\Loja.DTO.dll
+c:\Users\william estudos\documents\visual studio 2012\Projects\Loja\Loja.DTO\obj\Debug\Loja.DTO.pdb

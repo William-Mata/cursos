@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Par ou Impar</title>
+    <script src="ex0016.js"></script>
+    <style>
+        body {
+            background: darkgreen;
+            font: Arial, 15pt, normal;
+            margin: auto;
+            color: white;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        section {
+            margin: auto;
+            width: 430px;
+            height: 50px;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Par ou Impar</h1>
+    <section>
+        <div id="usuario">
+            DIGITE UM NÚMERO: <input type="number" name="numero" id="numero" min="1">
+            <input type="button" value="Verificar" onclick="parouimpar(n)">
+        </div>
+        <div id="resultado">
+            Resposta:
+        </div>
+    </section>
+</body>
+
+</html>
