@@ -1,9 +1,6 @@
-# Cursos
 # Cursos realizados para compreender melhor o conteúdo da faculdade e aprender coisas novas.
 
-
 #### Em agradecimento a todos que proprocionaram todo esse conhecimento, abaixo alguns
-
 <a href="https://www.wyden.com.br/unifavip">
 <img src="https://user-images.githubusercontent.com/50085652/141135219-716ed649-204b-40d9-af26-0b29fcc8401c.png"alt="Wyden"></a>
 <a href="https://www.cursoemvideo.com/">
@@ -42,4 +39,7 @@
 <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MYSQL">
 <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL-LITE">
 <div>
+  
+<br>
+<img src="https://user-images.githubusercontent.com/50085652/141698649-63b432ec-3f8b-42c2-ad49-b6f0af40f1b4.gif" min-width="300px" max-width="300px" width="300px" alt="Computer William Mata">
   
