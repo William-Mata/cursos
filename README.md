@@ -1,6 +1,6 @@
 # Cursos realizados para compreender melhor o conteúdo da faculdade e aprender coisas novas.
 
-#### Em agradecimento a todos que proprocionaram todo esse conhecimento, abaixo alguns
+#### Em agradecimento a todos que proprocionaram todo esse conhecimento, abaixo alguns dos locais onde realizei os curso.
 <a href="https://www.wyden.com.br/unifavip">
 <img src="https://user-images.githubusercontent.com/50085652/141135219-716ed649-204b-40d9-af26-0b29fcc8401c.png"alt="Wyden"></a>
 <a href="https://www.cursoemvideo.com/">
