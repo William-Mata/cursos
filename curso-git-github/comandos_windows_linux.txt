@@ -1,0 +1,21 @@
+Comandos                    /       Windows   /     Linux
+
+Lista pastas		               / dir		                  / ls
+
+Acessar uma (pasta/ diretorio)   / cd /pasta ou diretorio  / cd /pasta ou diretorio
+
+Voltar (pasta / diretorio) anterior / cd..			 / cd..
+
+Limpar o (terminal/tela)                    / cls			 /clear
+
+Retorna as informações anteriores / 			/ cd etc  depois ls
+
+Procura a pasta com o nome 	   / cd PRIMEIRA LETRA MAISCULA E TAB /
+
+Criar uma nova pasta 		/  mkdir nome da pasta        / mkdir
+
+Criar um arquivo    / echo conteudo do arquivo > nome do arquivo . tipo do arquivo / echo conteudo do arquivo > nome do arquivo . tipo do arquivo
+
+Deletar todos arquivos dentro da pasta / del nome da pasta / del nome da pasta
+
+Deletar pasta e arquivos dentro / rmdir nome da pasta /S /Q  /rm - rf nome da pasta

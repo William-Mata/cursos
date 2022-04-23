@@ -1,6 +1,0 @@
-algoritmo ""
-var
-
-inicio
-
-fimalgoritmo
