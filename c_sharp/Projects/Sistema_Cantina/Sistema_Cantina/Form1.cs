@@ -129,7 +129,7 @@ namespace Sistema_Cantina
                         lblValorCompra.Text = Convert.ToString(valortotal);
 
                         // adiciona a foto do objeto referente ao codigo do produto.
-                        picImagem.ImageLocation = "C:/Users/WILLIAM ESTUDOS/Desktop/Linguagem C#/imagens/" + codigo[indice] + ".jpg";
+                        picImagem.ImageLocation = "../../imagens/" + codigo[indice] + ".jpg";
 
                         // Limpa o código.
                         txtCodigo.Text = "";

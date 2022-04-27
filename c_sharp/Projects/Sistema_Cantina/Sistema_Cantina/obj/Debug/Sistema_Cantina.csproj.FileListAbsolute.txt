@@ -7,3 +7,14 @@ C:\Users\WILLIAM ESTUDOS\Documents\Visual Studio 2012\Projects\Sistema_Cantina\S
 C:\Users\WILLIAM ESTUDOS\Documents\Visual Studio 2012\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.csproj.GenerateResource.Cache
 C:\Users\WILLIAM ESTUDOS\Documents\Visual Studio 2012\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.exe
 C:\Users\WILLIAM ESTUDOS\Documents\Visual Studio 2012\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.pdb
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\bin\Debug\Sistema_Cantina.exe.config
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\bin\Debug\Sistema_Cantina.exe
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\bin\Debug\Sistema_Cantina.pdb
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.csproj.AssemblyReference.cache
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.csproj.SuggestedBindingRedirects.cache
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.Form1.resources
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.Properties.Resources.resources
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.csproj.GenerateResource.cache
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.csproj.CoreCompileInputs.cache
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.exe
+C:\Users\Remakker\Documents\GitHub\cursos\c_sharp\Projects\Sistema_Cantina\Sistema_Cantina\obj\Debug\Sistema_Cantina.pdb
