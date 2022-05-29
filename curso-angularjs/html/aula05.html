@@ -37,11 +37,11 @@
     <script>
         angular.module('ListaTelefonica', ["ngMessages"]);
 
-        angular.module('ListaTelefonica').controller('ListaTelefonicaCtrl', function ($scope) {
+        angular.module('ListaTelefonica').controller('ListaTelefonicaCtrl', function ($scope, $filter) {
             $scope.title = "Lista Telefonica";
             $scope.listaTel = [
                 {
-                    nome: "WILLIAM",
+                    nome: $filter('uppercase')("william"),
                     ddd: 21,
                     numero: "99999-8888",
                     operadora: "NEXTEL",
@@ -49,7 +49,7 @@
                     dataCadastro: new Date()
                 },
                 {
-                    nome: "NINA",
+                    nome: $filter('uppercase')("nina"),
                     ddd: 82,
                     numero: "98888-7777",
                     operadora: "CLARO",
@@ -57,7 +57,7 @@
                     dataCadastro: new Date()
                 },
                 {
-                    nome: "ALEX",
+                    nome: $filter('uppercase')("alex"),
                     ddd: 21,
                     numero: "97777-7777",
                     operadora: "VIVO",
@@ -65,7 +65,7 @@
                     dataCadastro: new Date()
                 },
                 {
-                    nome: "WALACE",
+                    nome: $filter('uppercase')("walace"),
                     ddd: 21,
                     numero: "97777-7777",
                     operadora: "TIM",
@@ -73,7 +73,7 @@
                     dataCadastro: new Date()
                 },
                 {
-                    nome: "MÃE",
+                    nome: $filter('uppercase')("mãe"),
                     ddd: 21,
                     numero: "96666-6666",
                     operadora: "CLARO",
@@ -81,7 +81,7 @@
                     dataCadastro: new Date()
                 },
                 {
-                    nome: "PAI",
+                    nome: $filter('uppercase')("pai"),
                     ddd: 21,
                     numero: "97272-6666",
                     operadora: "OI",
@@ -170,7 +170,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-class="{'selecionado negrito': item.selecionado}" ng-repeat="item in listaTel | filter: filtro | orderBy: ordem : direcao">
+                <tr ng-class="{'selecionado negrito': item.selecionado}" ng-repeat="item in listaTel | filter: filtro | orderBy: ordem : direcao | limitTo: 7">
                     <td scope="row">
                         <input type="checkbox" ng-model="item.selecionado" />
                     </td>
