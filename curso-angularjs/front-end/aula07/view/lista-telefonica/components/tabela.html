@@ -1,0 +1,31 @@
+ <!-- TABELA COM OS DADOS -->
+ <table class="table table-responsive text-center" ng-show="listaTel.length > 0">
+    <thead>
+        <tr>
+            <th scope="col">Remover</th>
+            <th scope="col"><a href="" ng-click="ordernarPor('nome')">Nome<a /></th>
+            <th scope="col"><a href="" ng-click="ordernarPor('ddd')">DDD</a></th>
+            <th scope="col"><a href="" ng-click="ordernarPor('numero')">Número</a></th>
+            <th scope="col"><a href="" ng-click="ordernarPor('operadora')">Operadora</a></th>
+            <th scope="col">Data Cadastro</th>
+            <th scope="col"><a href="" ng-click="ordernarPor('cor')">Cor</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-class="{'selecionado negrito': item.selecionado}"
+            ng-repeat="item in listaTel | filter: filtro | orderBy: ordem : direcao | limitTo: 7">
+            <td scope="row">
+                <input type="checkbox" ng-model="item.selecionado" /> {{item.selecionado}}
+            </td>
+
+            <td>{{item.nome | uppercase}}</td>
+            <td>{{item.ddd}}</td>
+            <td>{{item.numero}}</td>
+            <td>{{item.operadora | lowercase}}</td>
+            <td>{{item.dataCadastro | date: 'dd/MM/yyyy hh:mm'}}</td>
+            <td>
+                <div style="width: 20px;" ng-style="{'background-color': item.cor}">{{item.cor}}</div>
+            </td>
+        </tr>
+    </tbody>
+</table>

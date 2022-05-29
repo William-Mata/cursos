@@ -1,0 +1,45 @@
+<!-- FORMULARIO -->
+<form name="contatoForm">
+    <input type="text" class="form-control mb-2" placeholder="Nome" name="nome" ng-model="contato.nome"
+        ng-required="true" ng-minlength="3">
+    <input type="text" class="form-control mb-2" placeholder="DDD" name="ddd" ng-model="contato.ddd"
+        ng-required="true">
+    <input type="text" class="form-control mb-2" placeholder="Número" name="numero" ng-model="contato.numero"
+        ng-pattern="/^\d{4,5}-\d{4}$/" ng-required="true" ng-maxlength="10">
+    <select class="form-select text-center mb-2" ng-model="contato.operadora"
+        ng-options="operadora.nome as operadora.nome for operadora in operadoras | orderBy: 'nome'"
+        name="operadora" ng-required="true">
+        <option value="">Selecione uma operadora</option>
+    </select>
+</form>
+
+<!-- MENSAGENS DE ERROS PARA O FORMULARIO -->
+<div ng-messages="contatoForm.nome.$error" class="alert alert-danger">
+    <div ng-message="required">
+        Preencha o campo Nome para realizar o cadastro.
+    </div>
+    <div ng-message="minlength">
+        Digite seu nome deve conter no minimo 3 caracteres.
+    </div>
+</div>
+<div class="alert alert-danger" ng-show="contatoForm.ddd.$invalid && contatoForm.ddd.$dirty">
+    Preencha o campo DDD para realizar o cadastro.
+</div>
+<div class="alert alert-danger" ng-show="contatoForm.numero.$error.required && contatoForm.numero.$dirty">
+    Preencha o campo Número para realizar o cadastro.
+</div>
+<div class="alert alert-danger" ng-show="contatoForm.numero.$error.maxlength">
+    Digite no máximo 10 caracteres
+</div>
+<div class="alert alert-danger" ng-show="contatoForm.numero.$error.pattern">
+    Campo fora do padrão ex: 99999-8888 ou 9999-8888
+</div>
+<div class="alert alert-danger" ng-show="contatoForm.operadora.$invalid && contatoForm.operadora.$dirty">
+    Preencha o campo Operadora para realizar o cadastro.
+</div>
+
+ <!-- BOTÕES PARA O CADASTRA E REMOVER -->
+ <button type="button" class="btn btn-light btn-outline-primary mb-2 w-100 fs-5"
+ ng-click="cadastrarContato(contato)" ng-disabled="contatoForm.$invalid">Cadastrar</button>
+<button type="button" class="btn btn-light btn-outline-danger w-100 fs-5" ng-click="apagarContato()"
+ ng-if="isContatoSelecionado(listaTel)">Remover</button>
