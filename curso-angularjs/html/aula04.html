@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="ListaTelefonica">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - Angular</title>
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--CSS-->
+    <style>
+        .jombotron {
+            width: 500px;
+            background-color: darkgrey;
+            color: black;
+            font-family: monospace;
+        }
+
+        .selecionado {
+            background-color: red;
+        }
+
+        .negrito {
+            font-weight: bold;
+        }
+    </style>
+
+    <!--Angular-->
+    <script src="/angular/angular-1.8.2/angular.js"></script>
+    <script src="/angular/angular-1.8.2/angular-messages.js"></script>
+
+    <script>
+        angular.module('ListaTelefonica', ["ngMessages"]);
+
+        angular.module('ListaTelefonica').controller('ListaTelefonicaCtrl', function ($scope) {
+            $scope.title = "Lista Telefonica";
+            $scope.listaTel = [
+                {
+                    nome: "WILLIAM",
+                    ddd: 21,
+                    numero: "99999-8888",
+                    operadora: "NEXTEL",
+                    cor: "orange"
+                },
+                {
+                    nome: "NINA",
+                    ddd: 82,
+                    numero: "98888-7777",
+                    operadora: "CLARO",
+                    cor: "red"
+                },
+                {
+                    nome: "ALEX",
+                    ddd: 21,
+                    numero: "97777-7777",
+                    operadora: "VIVO",
+                    cor: "blue"
+                },
+                {
+                    nome: "WALACE",
+                    ddd: 21,
+                    numero: "97777-7777",
+                    operadora: "TIM",
+                    cor: "green"
+                },
+                {
+                    nome: "MÃE",
+                    ddd: 21,
+                    numero: "96666-6666",
+                    operadora: "CLARO",
+                    cor: "pink"
+                },
+            ]
+
+            $scope.operadoras = [
+                { nome: "OI", categoria: "FIXO" },
+                { nome: "GVT", categoria: "FIXO" },
+                { nome: "TIM", categoria: "CELULAR" },
+                { nome: "VIVO", categoria: "CELULAR" },
+                { nome: "NEXTEL", categoria: "CELULAR" },
+                { nome: "CLARO", categoria: "CELULAR" }
+            ]
+
+            $scope.cadastrarContato = function cadastrarTelNaLista(contato) {
+                $scope.listaTel.push(angular.copy(contato));
+                delete $scope.contato;
+                $scope.contatoForm.$setPristine();
+            }
+
+            $scope.apagarContato = function apagarTelNaLiSTA(contatos) {
+                $scope.listaTel = contatos.filter((contato) => {
+                    if (!contato.selecionado) {
+                        return contato;
+                    }
+                })
+            }
+
+            $scope.isContatoSelecionado = function (contatosSelecionado) {
+                return contatosSelecionado.some((contato) => {
+                    return contato.selecionado
+                })
+            }
+
+            $scope.classe1 = "selecionado";
+            $scope.classe2 = "negrito";
+            $scope.ativo = false;
+
+        });
+    </script>
+</head>
+
+<body ng-controller="ListaTelefonicaCtrl">
+    <div class="mx-auto mt-4 p-4 jombotron rounded">
+        <h3 class="text-center" ng-bind="title"></h3>
+        <table class="table table-responsive text-center" ng-show="listaTel.length > 0">
+            <thead>
+                <tr>
+                    <th scope="col">Remover</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">DDD</th>
+                    <th scope="col">Número</th>
+                    <th scope="col">Operadora</th>
+                    <th scope="col">Cor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-class="{'selecionado negrito': item.selecionado}" ng-repeat="item in listaTel track by $index">
+                    <td scope="row">
+                        <input type="checkbox" ng-model="item.selecionado" />
+                    </td>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.ddd}}</td>
+                    <td>{{item.numero}}</td>
+                    <td>{{item.operadora}}</td>
+                    <td>
+                        <div style="width: 20px;" ng-style="{'background-color': item.cor}">{{item.cor}}</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        Valido: {{contatoForm.$valid}} <br/>
+        Invalido: {{contatoForm.$invalid}}
+
+        <form name="contatoForm">
+            <input type="text" class="form-control mb-2" placeholder="Nome" name="nome" ng-model="contato.nome" ng-required="true" ng-minlength="3">
+            <input type="text" class="form-control mb-2" placeholder="DDD" name="ddd" ng-model="contato.ddd" ng-required="true">
+            <input type="text" class="form-control mb-2" placeholder="Número" name="numero" ng-model="contato.numero" ng-pattern="/^\d{4,5}-\d{4}$/"
+                ng-required="true" ng-maxlength="10">
+            <select class="form-select text-center mb-2" ng-model="contato.operadora"
+                ng-options="operadora.nome as operadora.nome for operadora in operadoras" name="operadora" ng-required="true">
+                <option value="">Selecione uma operadora</option>
+            </select>
+        </form>
+
+        <div ng-messages="contatoForm.nome.$error" class="alert alert-danger">
+            <div ng-message="required">
+                Preencha o campo Nome para realizar o cadastro.
+            </div>
+            <div ng-message="minlength">
+                Digite seu nome deve conter no minimo 3 caracteres.
+            </div>
+        </div>
+
+
+        <div class="alert alert-danger" ng-show="contatoForm.ddd.$invalid && contatoForm.ddd.$dirty">
+            Preencha o campo DDD para realizar o cadastro.
+        </div>
+        <div class="alert alert-danger" ng-show="contatoForm.numero.$error.required && contatoForm.numero.$dirty">
+            Preencha o campo Número para realizar o cadastro.
+        </div>
+        <div class="alert alert-danger" ng-show="contatoForm.numero.$error.maxlength">
+            Digite no máximo 10 caracteres
+        </div>
+        <div class="alert alert-danger" ng-show="contatoForm.numero.$error.pattern">
+            Campo fora do padrão ex: 99999-8888 ou 9999-8888
+        </div>
+        <div class="alert alert-danger" ng-show="contatoForm.operadora.$invalid && contatoForm.operadora.$dirty">
+            Preencha o campo Operadora para realizar o cadastro.
+        </div>
+        
+        <button type="button" class="btn btn-light btn-outline-primary mb-2 w-100 fs-5"
+            ng-click="cadastrarContato(contato)"
+            ng-disabled="contatoForm.$invalid">Cadastrar</button>
+
+        <button type="button" class="btn btn-light btn-outline-danger w-100 fs-5" ng-click="apagarContato(listaTel)"
+            ng-if="isContatoSelecionado(listaTel)">Remover</button>
+    </div>
+
+    <footer class="row text-center position-relative bottom mb-2 fs-5 fw-bolder" ng-include="'footer.html'">
+
+    </footer>
+
+    <!--BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
