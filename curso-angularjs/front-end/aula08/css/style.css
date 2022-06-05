@@ -1,0 +1,14 @@
+.jombotron {
+    width: 900px;
+    background-color: darkgrey;
+    color: black;
+    font-family: monospace;
+}
+
+.selecionado {
+    background-color: red;
+}
+
+.negrito {
+    font-weight: bold;
+}

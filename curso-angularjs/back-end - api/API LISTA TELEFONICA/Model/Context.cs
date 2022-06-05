@@ -9,5 +9,7 @@ namespace API_LISTA_TELEFONICA.Model
         {}
 
         public DbSet<Contato> Contato { get; set; }
+        public DbSet<Operadora> Operadora { get; set; }
+
     }
 }

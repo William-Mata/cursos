@@ -9,6 +9,8 @@ namespace API_LISTA_TELEFONICA.Model
 
         [Key]
         public int Id { get; set; }
+        public string Serial { get; set; }
+
         public string Nome { get; set; }
         public int DDD { get; set; }
         public string Numero { get; set; }
