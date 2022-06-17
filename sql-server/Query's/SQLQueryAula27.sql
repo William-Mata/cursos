@@ -1,0 +1,4 @@
+CREATE INDEX indice_nome_produto
+ON tbl_Produtos(NomeProduto) -- CRIA UM INDEX PARA FACILITAR NA CONSULTA EM UM DETERMINADO CAMPO DA TABELA
+
+SELECT * FROM tbl_Produtos
